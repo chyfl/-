@@ -3,7 +3,7 @@
         <!-- <head-top signin-up='home'>
             <span slot='logo' class="head_logo"  @click="reload">ele.me</span>
         </head-top> -->
-        12333
+        123456
     </div>
 </template>
 
