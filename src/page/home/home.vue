@@ -1,8 +1,8 @@
 <template>
   	<div>
-        <head-top signin-up='home'>
+        <!-- <head-top signin-up='home'>
             <span slot='logo' class="head_logo"  @click="reload">ele.me</span>
-        </head-top>
+        </head-top> -->
         <nav class="city_nav">
             <div class="city_tip">
                 <span>当前定位城市：</span>
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import headTop from '../../components/header/head'
+// import headTop from '../../components/header/head'
 import {cityGuess, hotcity, groupcity} from '../../service/getData'
 
 export default {
@@ -73,7 +73,7 @@ export default {
     },
 
     components:{
-        headTop
+        // headTop
     },
 
     computed:{
