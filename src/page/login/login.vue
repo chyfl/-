@@ -16,7 +16,7 @@
                 showPassword: false, // 是否显示密码
                 phoneNumber: null, //电话号码
                 mobileCode: null, //短信验证码
-                validate_token: null, //获取短信时返回的验证值，登录时需要
+                validate_token: null, //获取短信时返回的验证值，登录时需要ni 
                 computedTime: 0, //倒数记时
                 userInfo: null, //获取到的用户信息
                 userAccount: null, //用户名
