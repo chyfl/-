@@ -23,7 +23,7 @@ export const hotcity = () => fetch('/v1/cities', {
  * 获取首页所有城市
  */
 
-export const groupcity = () => fetch('/v1/cities', {
+export const groupcity = () => fetch('/v1/cities', {//fetch()请求的响应为一个Stream对象
 	type: 'group'
 });
 

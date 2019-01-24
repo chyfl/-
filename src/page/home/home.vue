@@ -1,15 +1,18 @@
 <template>
   	<div>
-        <!-- <head-top signin-up='home'>
+        <div>
+        <head-top signin-up='home'>
             <span slot='logo' class="head_logo"  @click="reload">ele.me</span>
-        </head-top> -->
-        123456
+        </head-top>
+        
+    </div>
+        
     </div>
 </template>
 
 <script>
-// import headTop from '../../components/header/head'
-import {cityGuess, hotcity, groupcity} from '../../service/getData'
+import headTop from '../../components/header/head'
+// import {cityGuess, hotcity, groupcity} from '../../service/getData'
 
 export default {
     data(){
@@ -22,38 +25,40 @@ export default {
     },
 
 	mounted(){
-        // 获取当前城市
-        cityGuess().then(res => {
-            this.guessCity = res.name;
-            this.guessCityid = res.id;
-        })
+        // // 获取当前城市
+        // cityGuess().then(res => {
+        //     this.guessCity = res.name;
+        //     this.guessCityid = res.id;
+        // })
 
-        //获取热门城市
-        hotcity().then(res => {
-            this.hotcity = res;
-        })
+        // //获取热门城市
+        // hotcity().then(res => {
+        //     // console.log(res)
+        //     this.hotcity = res;
+        // })
 
-        //获取所有城市
-        groupcity().then(res => {
-            this.groupcity = res;
-        })
+        // //获取所有城市
+        // groupcity().then(res => {
+        //       console.log(res)
+        //     this.groupcity = res;
+        // })
     },
 
     components:{
-        // headTop
+        headTop
     },
 
     computed:{
-        //将获取的数据按照A-Z字母开头排序
-        sortgroupcity(){
-            let sortobj = {};
-            for (let i = 65; i <= 90; i++) {
-                if (this.groupcity[String.fromCharCode(i)]) {
-                    sortobj[String.fromCharCode(i)] = this.groupcity[String.fromCharCode(i)];
-                }
-            }
-            return sortobj
-        }
+        // //将获取的数据按照A-Z字母开头排序
+        // sortgroupcity(){
+        //     let sortobj = {};
+        //     for (let i = 65; i <= 90; i++) {
+        //         if (this.groupcity[String.fromCharCode(i)]) {
+        //             sortobj[String.fromCharCode(i)] = this.groupcity[String.fromCharCode(i)];
+        //         }
+        //     }
+        //     return sortobj
+        // }
     },
 
     methods:{
