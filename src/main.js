@@ -20,7 +20,7 @@ const router = new VueRouter({
 	scrollBehavior (to, from, savedPosition) {
 		console.log(to) // to：要进入的目标路由对象，到哪里去
 		console.log(from) // from：离开的路由对象，哪里来
-		console.log(savePosition) // savePosition：会记录滚动条的坐标，点击前进/后退的时候记录值{x:?,y:?}
+		console.log(savedPosition) // savePosition：会记录滚动条的坐标，点击前进/后退的时候记录值{x:?,y:?}
 	    if (savedPosition) {
 		    return savedPosition
 		} else {

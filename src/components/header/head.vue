@@ -25,6 +25,7 @@
 
 <script>
     import {mapState, mapActions} from 'vuex'
+    console.log(mapActions)
     export default {
     	data(){
             return{
@@ -38,8 +39,10 @@
         },
         props: ['signinUp', 'headTitle', 'goBack'],
         computed: {
+           
             ...mapState([
-                'userInfo'
+                'userInfo',
+                 console.log(...mapState([]))
             ]),
         },
         methods: {

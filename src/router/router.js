@@ -3,7 +3,7 @@ import App from '../App'
 const home = r => require.ensure([], () => r(require('../page/home/home')), 'home')
 const city = r => require.ensure([], () => r(require('../page/city/city')), 'city')
 const login = r => require.ensure([], () => r(require('../page/login/login')), 'login')
-
+const profile = r => require.ensure([], () => r(require('../page/profile/profile')), 'profile')
 
 
 
@@ -92,34 +92,34 @@ export default [{
             path: '/login',
             component: login
         },
-        // //个人信息页
-        // {
-        //     path: '/profile',
-        //     component: profile,
-        //     children: [{
-        //         path: 'info', //个人信息详情页
-        //         component: info,
-        //         children: [{
-        //             path: 'setusername',
-        //             component: setusername,
-        //         },{
-        //             path: 'address',
-        //             component: address,     //编辑地址
-        //             children:[{
-        //                 path:'add',
-        //                 component:add,
-        //                 children:[{
-        //                     path:'addDetail',
-        //                     component:addDetail
-        //                 }]
-        //             }]
-        //         }]
-        //     },
-        //     {
-        //         path: 'service', //服务中心
-        //         component: service,
-        //     },]
-        // },
+        //个人信息页
+        {
+            path: '/profile',
+            component: profile,
+            // children: [{
+            //     path: 'info', //个人信息详情页
+            //     component: info,
+            //     children: [{
+            //         path: 'setusername',
+            //         component: setusername,
+            //     },{
+            //         path: 'address',
+            //         component: address,     //编辑地址
+            //         children:[{
+            //             path:'add',
+            //             component:add,
+            //             children:[{
+            //                 path:'addDetail',
+            //                 component:addDetail
+            //             }]
+            //         }]
+            //     }]
+            // },
+            // {
+            //     path: 'service', //服务中心
+            //     component: service,
+            // },]
+        },
         // //修改密码页
         // {
         //     path: '/forget',
