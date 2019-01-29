@@ -6,7 +6,8 @@ const login = r => require.ensure([], () => r(require('../page/login/login')), '
 const profile = r => require.ensure([], () => r(require('../page/profile/profile')), 'profile')
 const info = r => require.ensure([], () => r(require('../page/profile/children/info')), 'info')
 const order = r => require.ensure([], () => r(require('../page/order/order')), 'order')
-
+const address = r => require.ensure([], () => r(require('../page/profile/children/children/address')), 'address')
+const setusername = r => require.ensure([], () => r(require('../page/profile/children/children/setusername')), 'setusername')
 export default [{
     path: '/',
     component: App, //顶层路由，对应index.html
@@ -101,21 +102,23 @@ export default [{
             children: [{
                 path: 'info', //个人信息详情页
                 component: info,
-                // children: [{
-                //     path: 'setusername',
-                //     component: setusername,
-                // },{
-                //     path: 'address',
-                //     component: address,     //编辑地址
-                //     children:[{
-                //         path:'add',
-                //         component:add,
-                //         children:[{
-                //             path:'addDetail',
-                //             component:addDetail
-                //         }]
-                //     }]
-                // }]
+                children: [{
+                    path: 'setusername',
+                    component: setusername,
+                },
+                {
+                    path: 'address',
+                    component: address,     //编辑地址
+                    // children:[{
+                    //     path:'add',
+                    //     component:add,
+                    //     children:[{
+                    //         path:'addDetail',
+                    //         component:addDetail
+                    //     }]
+                    // }]
+                }
+            ]
             },
             // {
             //     path: 'service', //服务中心
