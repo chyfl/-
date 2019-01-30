@@ -7,6 +7,8 @@ const profile = r => require.ensure([], () => r(require('../page/profile/profile
 const info = r => require.ensure([], () => r(require('../page/profile/children/info')), 'info')
 const order = r => require.ensure([], () => r(require('../page/order/order')), 'order')
 const address = r => require.ensure([], () => r(require('../page/profile/children/children/address')), 'address')
+const shop = r => require.ensure([], () => r(require('../page/shop/shop')), 'shop')
+const msite = r => require.ensure([], () => r(require('../page/msite/msite')), 'msite')
 const setusername = r => require.ensure([], () => r(require('../page/profile/children/children/setusername')), 'setusername')
 export default [{
     path: '/',
@@ -27,12 +29,12 @@ export default [{
             path: '/city/:cityid',
             component: city
         },
-        //所有商铺列表页
-        // {
-        //     path: '/msite',
-        //     component: msite,
-        //     meta: { keepAlive: true },
-        // },
+        // 所有商铺列表页
+        {
+            path: '/msite',
+            component: msite,
+            meta: { keepAlive: true },
+        },
         // //特色商铺列表页
         // {
         //     path: '/food',
@@ -44,9 +46,9 @@ export default [{
         //     component: search
         // },
         // //商铺详情页
-        // {
-        //     path: '/shop',
-        //     component: shop,
+        {
+            path: '/shop',
+            component: shop,
         //     children: [{
         //         path: 'foodDetail', //食品详情页
         //         component: foodDetail,
@@ -58,7 +60,7 @@ export default [{
         //             component: shopSafe,
         //         }, ]
         //     }]
-        // },
+        },
         // 确认订单页
         // {
         //     path: '/confirmOrder',
