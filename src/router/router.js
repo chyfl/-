@@ -9,6 +9,10 @@ const order = r => require.ensure([], () => r(require('../page/order/order')), '
 const address = r => require.ensure([], () => r(require('../page/profile/children/children/address')), 'address')
 const shop = r => require.ensure([], () => r(require('../page/shop/shop')), 'shop')
 const msite = r => require.ensure([], () => r(require('../page/msite/msite')), 'msite')
+const forget = r => require.ensure([], () => r(require('../page/forget/forget')), 'forget')
+const foodDetail = r => require.ensure([], () => r(require('../page/shop/children/foodDetail')), 'foodDetail')
+const addDetail = r => require.ensure([], () => r(require('../page/profile/children/children/children/children/addDetail')), 'addDetail')
+const add = r => require.ensure([], () => r(require('../page/profile/children/children/children/add')), 'add')
 const setusername = r => require.ensure([], () => r(require('../page/profile/children/children/setusername')), 'setusername')
 export default [{
     path: '/',
@@ -49,16 +53,18 @@ export default [{
         {
             path: '/shop',
             component: shop,
-        //     children: [{
-        //         path: 'foodDetail', //食品详情页
-        //         component: foodDetail,
-        //     }, {
+            children: [{
+                path: 'foodDetail', //食品详情页
+                component: foodDetail,
+            }, 
+        // {
         //         path: 'shopDetail', //商铺详情页
         //         component: shopDetail,
         //         children: [{
         //             path: 'shopSafe', //商铺安全认证页
         //             component: shopSafe,
-        //         }, ]
+        //         },
+     ]
         //     }]
         },
         // 确认订单页
@@ -129,10 +135,10 @@ export default [{
         ]
         },
         // //修改密码页
-        // {
-        //     path: '/forget',
-        //     component: forget
-        // },
+        {
+            path: '/forget',
+            component: forget
+        },
         //订单列表页
         {
             path: '/order',
