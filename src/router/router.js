@@ -2,6 +2,7 @@ import App from '../App'
 
 const home = r => require.ensure([], () => r(require('../page/home/home')), 'home')
 const city = r => require.ensure([], () => r(require('../page/city/city')), 'city')
+const search = r => require.ensure([], () => r(require('../page/search/search')), 'search')
 const login = r => require.ensure([], () => r(require('../page/login/login')), 'login')
 const profile = r => require.ensure([], () => r(require('../page/profile/profile')), 'profile')
 const info = r => require.ensure([], () => r(require('../page/profile/children/info')), 'info')
@@ -13,6 +14,7 @@ const forget = r => require.ensure([], () => r(require('../page/forget/forget'))
 const foodDetail = r => require.ensure([], () => r(require('../page/shop/children/foodDetail')), 'foodDetail')
 const shopSafe = r => require.ensure([], () => r(require('../page/shop/children/children/shopSafe')), 'shopSafe')
 const shopDetail = r => require.ensure([], () => r(require('../page/shop/children/shopDetail')), 'shopDetail')
+const confirmOrder = r => require.ensure([], () => r(require('../page/confirmOrder/confirmOrder')), 'confirmOrder')
 const addDetail = r => require.ensure([], () => r(require('../page/profile/children/children/children/children/addDetail')), 'addDetail')
 const add = r => require.ensure([], () => r(require('../page/profile/children/children/children/add')), 'add')
 const setusername = r => require.ensure([], () => r(require('../page/profile/children/children/setusername')), 'setusername')
@@ -46,11 +48,11 @@ export default [{
         //     path: '/food',
         //     component: food
         // },
-        // //搜索页
-        // {
-        //     path: '/search/:geohash',
-        //     component: search
-        // },
+        //搜索页
+        {
+            path: '/search/:geohash',
+            component: search
+        },
         // //商铺详情页
         {
             path: '/shop',
@@ -70,9 +72,9 @@ export default [{
             }]
         },
         // 确认订单页
-        // {
-        //     path: '/confirmOrder',
-        //     component: confirmOrder,
+        {
+            path: '/confirmOrder',
+            component: confirmOrder,
         //     children: [
         //         {
         //         path: 'remark', //订单备注
@@ -99,7 +101,7 @@ export default [{
         //         }, ]
         //     }, 
         // ]
-        // },
+        },
         //登录注册页
         {
             path: '/login',
